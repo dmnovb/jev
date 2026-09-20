@@ -1,0 +1,89 @@
+{
+  "route": {
+    "question": "What is the user asking the local Mac assistant to do?"
+  },
+  "functions": {
+    "open_app": {
+      "description": "Open or focus a macOS application on this computer, such as Notes, Safari, Slack, or Cursor.",
+      "arguments": {
+        "app": {
+          "question": "Which application should be opened or brought to the front?",
+          "options": {
+            "Notes": "Apple Notes for writing and jotting things down",
+            "Safari": "Apple Safari web browser",
+            "Terminal": "Apple Terminal for a command-line shell",
+            "Finder": "Finder for browsing files and folders",
+            "Messages": "Apple Messages / iMessage",
+            "Mail": "Apple Mail email client",
+            "Calendar": "Apple Calendar",
+            "Music": "Apple Music",
+            "Photos": "Apple Photos",
+            "Reminders": "Apple Reminders todo lists",
+            "System Settings": "macOS System Settings / Preferences",
+            "Cursor": "Cursor code editor",
+            "Ghostty": "Ghostty terminal emulator",
+            "Obsidian": "Obsidian notes vault",
+            "Notion": "Notion workspace",
+            "Slack": "Slack chat",
+            "Spotify": "Spotify music player",
+            "Chrome": "Google Chrome browser",
+            "Comet": "Comet browser by Perplexity",
+            "ChatGPT": "ChatGPT desktop app"
+          }
+        }
+      }
+    },
+    "web_search": {
+      "description": "Search the web for something — look up a price, fact, or topic in a browser such as Comet, Safari, or Chrome. Use when the user wants to search, google, or look something up online. Do not use this for simple arithmetic like 2+2.",
+      "arguments": {
+        "browser": {
+          "question": "Which browser should run the search?",
+          "stated": "Does the user name a specific browser for the search, such as Comet, Safari, or Chrome?",
+          "options": {
+            "Comet": "Comet browser by Perplexity",
+            "Safari": "Apple Safari",
+            "Chrome": "Google Chrome"
+          }
+        }
+      }
+    },
+    "calculate": {
+      "description": "Compute a basic arithmetic answer locally — addition, subtraction, multiplication, division, powers, percentages as math. Use for questions like what is 2+2, 15% of 80, or 3^4.",
+      "arguments": {}
+    },
+    "open_url": {
+      "description": "Open a known website in the default browser (GitHub, Gmail, YouTube, and similar presets).",
+      "arguments": {
+        "preset": {
+          "question": "Which known website should be opened?",
+          "options": {
+            "github": "GitHub code hosting",
+            "gmail": "Gmail web inbox",
+            "calendar": "Google Calendar on the web",
+            "youtube": "YouTube",
+            "twitter": "X / Twitter",
+            "docs": "TypeSafe documentation site"
+          }
+        }
+      }
+    },
+    "open_folder": {
+      "description": "Open a common folder in Finder such as Desktop, Downloads, Documents, or the home directory.",
+      "arguments": {
+        "folder": {
+          "question": "Which folder should Finder open?",
+          "options": {
+            "Desktop": "the Desktop folder",
+            "Downloads": "the Downloads folder",
+            "Documents": "the Documents folder",
+            "Home": "the user home directory"
+          }
+        }
+      }
+    },
+    "clarify": {
+      "description": "The request is conversational, unclear, or not something this assistant can execute (not open app/URL/folder, not a web search, and not basic arithmetic). Ask the user to rephrase.",
+      "arguments": {}
+    }
+  }
+}
